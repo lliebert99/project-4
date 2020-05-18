@@ -1,7 +1,6 @@
 //jshint esversion: 6
 
 let controller = function() {
-
   let addCommentFromInputBox = function() {
     //Semmy uses "$" to name variables that will contain jQuery objects
     let $new_comment;
@@ -12,6 +11,9 @@ let controller = function() {
       $(".comments").append($new_comment);
       //$new_comment.fadeIn();
       $(".comment-input input").val("");
+
+      //log the list of paragraph elements
+      console.log($(".comments").html());
     }
   };
 
