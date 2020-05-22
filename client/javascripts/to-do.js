@@ -4,7 +4,7 @@ let controller = function() {
   //console.log(localStorage.getItem("commentsList"))
   //load comments from local storage when page loads
   if (localStorage.getItem("commentsList")) {
-    $(".comments").html(localStorage.getItem("toDoList"));
+    $(".comments").html(localStorage.getItem("commentsList"));
   }
 
   let addCommentFromInputBox = function() {
@@ -19,7 +19,7 @@ let controller = function() {
       $(".comment-input input").val("");
 
       //store the list of paragraph elements
-      localStorage.setItem("toDoList", $(".comments").html());
+      localStorage.setItem("commentsList", $(".comments").html());
       console.log(localStorage.getItem("commentsList"));
 
       //log the list of paragraph elements
